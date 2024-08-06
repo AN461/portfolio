@@ -15,9 +15,8 @@ body{
 }
 
 .container{
-    width: 100%;
+    width: calc(100% - 270px);
     height: 100%;
-    margin: auto;
 }
 .padd-15{
     padding-left: 15px;
@@ -59,8 +58,7 @@ body{
     background-image: linear-gradient(to right,rgb(13, 12, 14),rgb(32, 33, 36));
     min-height: 100vh;
     width: 100%;
-    
-    padding: 0 2rem;
+    padding: 0 5rem;
     position:fixed;
     left: 270px;
     top: 0;
@@ -265,14 +263,12 @@ ul{
     
    
 }
+.Home .home-profile{
+    max-width: 300px;
+}
 .Home .home-content{
-    flex: 0 0 60%;
-    max-width: 60%;
-    align-self: center;
-    padding-left: 40px;
-    padding-right: 70px;
-    margin-top: 70px;
-    
+    max-width: 600px;
+    width: 80vw;
 }
 .home-content h2,
 .home-content h1{
@@ -284,18 +280,19 @@ ul{
     font-family: var(--font-Barlow);
     letter-spacing: 0.12rem;
 }
-.Home .home-profile{
-    flex: 0 0 40%;
-    max-width: 40%;
-    position: relative;
-    margin-top: 70px;
+.Home .row{
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: nowrap;
+    gap: 40px;
 }
 .profile-pic{
     height: 200px;
     width: 200px;
     padding:10px;
-    
-    
 }
 .profile{
     height: 300px;
@@ -334,7 +331,6 @@ ul{
 .section .container{
     padding-top: 60px;
     padding-bottom: 70px;
-    
 }
 
 .section-title{
@@ -766,9 +762,7 @@ ul{
 /* Contact Section Start */
 
 .contact .contact-text{
-    flex: 0 0 100%;
     max-width: 100%;
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -790,12 +784,12 @@ ul{
 
 }
 .contact-details{
-    flex: 0 0 100%;
+    /* flex: 0 0 100%;
     max-width: 100%;
     margin-top: 50px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row;*/
+    flex-wrap: wrap; 
     justify-content: space-around;
 
 }
