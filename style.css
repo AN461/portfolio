@@ -755,13 +755,9 @@ ul{
 
 }
 .contact-details{
-    /* flex: 0 0 100%;
-    max-width: 100%;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;*/
     flex-wrap: wrap; 
     justify-content: space-around;
+    gap: 30px;
 
 }
 .contact-details-wrapper{
@@ -779,8 +775,11 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
     align-items: center;
     color: white;
+    padding: 20px 0px;
+    border-radius: 40px;
     font-family: var(--font-Barlow);
     letter-spacing: 0.13rem;
 }
@@ -820,9 +819,44 @@ ul{
 /* media queries start */
 
 @media (max-width:700px){
-    .aside-wrapper{
-        display: none;
+    .section .container{
+        padding-top: 120px;
     }
+    .aside{
+        width: 100vw;
+        /* display: none; */
+        height: 110px;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: #ed7839a1;
+        backdrop-filter: blur(15px);
+    }
+    .aside .nav{
+        height: 0px;
+        width: 100%;
+        z-index: 1000;
+        transition: 0.3s;
+        display: flex;
+        position: absolute;
+        top: -100px;
+        flex-direction: column;
+        background-color:rgba(35, 36, 39, 0.847);
+        backdrop-filter: blur(5px);
+        overflow-y: hidden;
+    }
+
+    .aside .nav.open{
+        height: 300px;
+        padding-bottom: 20px;
+    }
+
+    .aside .nav li{
+        flex: 1;
+    }
+
     .description{
         font-size: 15px;
     }
@@ -836,7 +870,6 @@ ul{
         font-size: 10px;
     }
     .row{
-        height: 100%;
         box-sizing: content-box;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -846,9 +879,6 @@ ul{
         width: 45px;
         border: 2px solid white;
         cursor: pointer;
-        position: fixed;
-        left: 300px;
-        top: 20px;
         border-radius: 10px;
         background-color: white;
         display: flex !important;
@@ -933,5 +963,48 @@ ul{
     .nav.open{
         display: flex;
     }
-    
+
+    .contact-details{
+        flex-direction: column;
+    }
+
+    .contact-item{
+        background-color: gray;
+    }
+}
+
+/* ui -- fixes */
+.Home .row{
+    flex-wrap: wrap;
+}
+
+.about .row.information,.about .row.knowledge{
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about .row.information>div{
+    min-width: 300px;
+}
+
+.about .row.information .personal-info{
+    max-width: 350px;
+}
+
+
+
+.about .row.knowledge>div{
+    min-width: 350px;
+    max-width: 500px;
+    align-self: self-start;
+}
+
+.services-boxes{
+    flex-wrap: wrap;
+    gap:30px;
+}
+
+.services-boxes .box{
+    min-width: 300px;
 }
